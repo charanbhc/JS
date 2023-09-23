@@ -1,0 +1,420 @@
+JAVA SCRIPT ---------> Loosely SCRIPTed language
+----------------------------------------------------
+2 types
+        1. client side SCRIPTing
+                                running with in the web browser
+                                Java SCRIPT
+                                angular js,etc
+
+        2. server side SCRIPTing
+                                running with in the web server
+                                jsp
+                                php
+----------------------------------------------------
+JAVA SCRIPT
+
+    internet explorer------> VB SCRIPT
+    firefox,chrome--------> Java SCRIPT
+
+    initial name --------> Live SCRIPT
+    official name -------> ECMA SCRIPT 1995,DECEMBER
+----------------------------------------------------
+Java SCRIPT is a    
+                    Object based SCRIPTing language
+                    interpreted language
+                    case sensitive language
+----------------------------------------------------
+can you run a java SCRIPT file in a browser ? -----> NO
+
+3 ways to run JavaScript :
+    1. you can save filename.html or filename.html and run
+    2. external JavaScript
+    3.Google Chrome developer console
+                                         cntrl + shift + J 
+                                         cmd + opt + J 
+----------------------------------------------------
+Syntax :
+        <script type="text/javacript language="javacript">
+        </script>
+
+ you can add <script< in
+                            Head tag <head> or
+                            Body Tag <body>
+                            external js file
+----------------------------------------------------
+Expressions and Statements 
+----------------------------------------------------
+Popups:
+        1. alert()------> alert warning message to user
+        2. confirm()----> takes confirmation from user (Yes/No, True/False)
+        3. prompt()------> it takes input from uuser
+----------------------------------------------------
+Variables:
+    Identifier
+    Rules of Identifier:
+            1. Starts with [a-z],[A-Z],$....
+            2. Doesn't start with digits,any special chars like @,&,! etc
+    Example:
+
+     Right Identifiers                       Wrong Identifiers
+        simple                                  1sum
+        a                                       @sum
+        a23
+        Sum of Variables
+        _sum
+   
+ Declaration :
+                1. var(1995-2015)
+                2. let 2015
+                    eg: let a;
+                        let a=50;
+                3. const
+                    eg: const a=20; most assign a value to a Variable
+----------------------------------------------------
+Data types
+
+    2 types
+            1.primitive 5types ----( Numbers, undefined, string, boolean, null )
+            2. non primitive ( objet,array etc )
+            typeof()
+----------------------------------------------------
+Operators:
+    1. Arthmetic Operators----------(+, -, *, /, %)
+    2. Assignment Operators---------(=, +=, -=, *=, /=, %)
+    3. Bitwise Operators-------------(|, &, ~)
+    4. Comparision Operators------------(<, >, <=, >=, +==, !=)
+    5. Logical Operators------------(&&, ||, AND, OR)
+----------------------------------------------------
+Sequence of Statements (script code)
+    <script>
+    {
+        document.write();
+        document.write();
+    }
+    </script>
+Collection of Blocks ( script block )
+----------------------------------------------------
+Object
+
+    Object Literal
+        Syntax :
+                    var varname = {property:value 1;.....propertyn:valuen};
+        Example :
+                    var student={id:501;name:AAAA;Marks:522}
+                    document.write(student.id);
+    Instance :
+                    var student = new Object();
+                    student.id=502;
+    Constructor :
+                     classname objectname=new constructor();
+----------------------------------------------------
+//Type Conversion
+    to convert one type of the dats into another type of data
+ 0------Number
+ 1------Number
+ var s = Boolean(0)
+----------------------------------------------------
+Control Structures:
+    1. Selection or Conditional Statements:
+        1. if or simple if :
+            if(condition)
+            {
+                //True Block
+            }
+
+        2. if else:
+            if(condition)
+            {
+                //True Block
+            }
+            else
+            {
+                //Flase Block
+            }
+
+        3. if else if ladder:
+            if(condition)
+            {
+                //True Block
+            }
+            else if(condition)
+            {
+                //True Block
+            }
+            else
+            {
+                //Flase Block
+            }
+        4. switch:
+            switch(expression)
+            {
+                case 'value1':
+                    //Statements
+                    break:
+                case 'value2':
+                    //Statements
+                    break:
+                case 'valueN':
+                    //Statements
+                    break:
+                  default
+                  //statements
+                
+            }
+----------------------------------------------------
+FUNCTIONS:
+    Syntax:
+        funtion name(parameter1,parameter2,....,parametern)
+        {
+            //code to be executed
+        }
+
+    Variable Scope:
+        var - block wise scope (global) , we can assign multiple times using var for same variable
+
+        let - the scope is limited to local  , we can not assign multiple times using let for same variable
+
+        let a=1                                            var b=0
+        let a=2------results on error                      var b=1--------------no error 
+
+        -->Variables declared outside the function are known as Global Variables 
+        -->Variables declared with var, are either functiom-scoped or global-scoped
+
+    REST PARAMETER (...name):
+        A function to accept an indefinite number of arguments as an array
+        eg. function sumAll(...arr)
+            {
+                let sum=0
+                for (let i of arr)
+                {
+                    sum+=i
+                }
+                return sum 
+            }
+            document.write(sumAll(1,2,3,4,5))--------> 15
+    SPREAD PARAMETER : Opposite to REST PARAMETER
+        eg. function showName(fname,lname,...remaaining)   //Spread Operator
+            {
+                alert(fname)
+                alert(lname)
+                alert(remaaining[0])
+                alert(remaaining[1])
+                alert("length of rest is "+remaaining.length) ---> 2
+            }
+            showName('karthik','sagirala','hello',"world")
+----------------------------------------------------
+#random_number
+function get_numb(low,high) {
+    var numb=low+Math.floor(Math.random()*high);
+    return numb;
+}
+var numbe=get_numb(1,100);
+console.log(numbe);
+----------------------------------------------------
+#Dice
+
+function rollDice() {
+    var dice=1+Math.floor(Math.random()*6);
+    return dice;
+}
+var result=rollDice()
+console.log(result)
+----------------------------------------------------
+function rollDice() {
+    var dice=1+Math.floor(Math.random()*6);
+    return dice;
+}
+var result=rollDice
+console.log(result)
+
+
+
+Output :
+
+ƒ rollDice() {
+    var dice=1+Math.floor(Math.random()*6);
+    return dice;
+}
+-------------------------------------------
+#Anonymous function
+
+const var_add=function (a,b){
+    return a+b;
+}
+const var_sub=function (a,b){
+return a-b;
+}
+console.log(var_add(3,2)) #5
+console.log(var_sub(3,2)) #1
+-------------------------------------------
+// function printHello(){
+//     return "hello";   
+// }
+// console.log(printHello());
+    
+    
+    
+let var_hello = function()
+    {
+        return "hello";
+    }
+console.log(printHello(var_hello()));
+-------
+let hello = function()
+    {
+        return "hello";
+    }
+console.log(printHello(hello));
+
+------- arrow functions-------
+let hello = () => "hello";
+console.log(printHello(hello));
+-------------------------------------------
+let hello=function (name) {
+    return "hello " + name
+}
+console.log(hello("Charan"))
+
+----
+let hello=(name) =>"hello " + name
+console.log(hello("Charan"))
+-------------------------------arrays------------
+const fruits = ["Banana", "Orange","Apple", "Mango"]
+console. log (fruits)  //all
+console. log(fruits [2]);   //apple
+console. log(fruits. length);   //4
+console. log(fruits[fruits. length-1]);  //mango
+console. log (typeof(fruits))  //object
+fruits.push ("Strawberry"); //add Strawberry
+console. log (fruits) 
+console. log(fruits. length); //5
+fruits [0] = "Water Melon";  //add watermelon to 0 place
+fruits.pop(" ") // last element gone
+console. log (fruits) 
+fruits.pop("Orange") // orange push
+console. log (fruits) 
+--------------------------------------------Loops----------
+const fruits = ["Banana", "Orange","Apple", "Mango"]
+console. log (fruits)  //all
+
+// for (let i=0;i<fruits.length;i++)
+//     {
+//         console.log(fruits[i]);
+//     }
+
+// var i=0;
+// while (i<fruits.length) 
+// {
+//     console.log(fruits[i]);
+//     i++
+// }
+
+// i=0;
+// do
+//     {
+//         console.log(fruits[i]);
+//         i++
+//     }
+// while (i<fruits.length) 
+
+// for in
+const numbers = [45, 2, 9, 16, 25];
+let sum = 0;
+for (let x in numbers) 
+{
+    sum += numbers [x];
+
+}
+
+console. log (sum) ;
+
+---------------------------------------------spread -------The JavaScript spread operator (...) allows us to quickly copy all or part of an existing array or object into another array or object.
+
+
+// const arrValue = ['My', 'name', 'is', 'Charan'];
+
+// console.log(arrValue);   // ["My", "name", "is", "Charan"]
+// console.log(...arrValue); // My name is Charan
+
+// const arr1 = ['one', 'two'];
+// const arr2 = [...arr1, 'three', 'four', 'five'];
+
+// console.log(arr2); 
+// console.log(...arr2); 
+
+
+// let myFunction = function(...args) {
+//     console.log(args);
+// }
+
+// myFunction(3); // [3]
+// myFunction(4, 5, 6, 7); // [4, 5, 6]
+
+function sum(x, y ,z, w) {
+    console.log(x + y + z + w);
+}
+
+const num1 = [1, 3, 4, 5, 6, 7];
+
+sum(...num1); // 8
+--------------------------------------Object
+
+// const fruits = ["Banana", "Orange", "Apple", 12];
+// console.log(fruits);
+
+// const person1 = {firstName:"Iron", lastName:"Man", age:8, sunSign:"Gemini"};
+// const person2 = {firstName:"The", lastName:"thor", age:9, sunSign:"Leo"};
+
+// const dummy_array = [person1, person2];
+// console.log(dummy_array);
+
+// const person = {firstName:"Iron", lastName:"Man", age:8, sunSign:"Gemini"};
+// console.log(person.firstName);
+// console.log(person["age"]);
+
+
+
+const person =
+{
+    firstName: "Iron",
+    lastName: "Man",
+    age: 8,
+    sunSign: "Gemini",
+
+    fullName: function () {
+        return this.firstName + " " + this.lastName;
+    }
+};
+
+var name = person.fullName();
+console.log(name);
+
+for (const item in person) {
+    // console.log(`${item}: ${person[item]}`);
+
+    console.log(item + " : " + person[item]);
+}
+---------------
+for (let x in dummy_array) {
+ // console.log(dummy_array[x]);
+
+    for (const item in dummy_array[x]) {
+        console.log(item + " : " + dummy_array[x][item]);
+    }  
+}
+
+
+// const numbers = [45, 4, 9, 16, 25];
+// let txt = "";
+// let sum = 0;
+// for (let x in numbers) {
+//   sum += numbers[x];
+// }
+// console.log(sum);
+
+
+// for (const item in person) {
+//   // console.log(`${item}: ${person[item]}`);
+    
+//   console.log(item + " : " + person[item]);
+// }
